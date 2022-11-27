@@ -19,6 +19,10 @@
         border-radius: 3px;
         display: table;
         overflow: hidden;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.25);
+        transition: all .5s .2s;
+
     }
 
     &__left {
@@ -59,6 +63,12 @@
     &:target {
         opacity: 1;
         visibility: visible;
+    }
+
+    //open state
+    &:target &__content {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
     }
 
     &__close {
